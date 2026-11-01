@@ -92,14 +92,15 @@
 import java.util.Scanner;
 public class Control {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the 1st number:");
+        try(Scanner sc = new Scanner(System.in)){
+            System.out.println("Enter the 1st number:");
         int num1 = sc.nextInt();
         System.out.println("Enter the 2nd number:");
         int num2 = sc.nextInt();
         System.out.println("Enter the Operator:");
         char operator = sc.next().charAt(0);
         Calculate(num1, num2, operator);
+        }  
     }
 
     public static void Calculate(int a, int b, char operator) {
